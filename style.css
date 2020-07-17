@@ -21,66 +21,17 @@ form .statement {
 	margin-bottom:10px;
 }
 
-form .likert {
-	list-style:none;
-	width:100%;
-	margin:0;
-	padding:0 0 35px;
-	display:block;
-	border-bottom:2px solid #efefef;
-}
-
-form .likert:last-of-type {border-bottom:0;}
-
-form .likert:before {
-	content: '';
-	position:relative;
-	top:11px;
-	left:9.5%;
-	display:block;
-	background-color:#efefef;
-	height:4px;
-	width:78%;
-}
-
-form .likert li {
-	display:inline-block;
-	width:19%;
-	text-align:center;
-	vertical-align: top;
-}
-  
-form .likert li input[type=radio] {
-	display:block;
-	position:relative;
-	top:0;
-	left:50%;
-	margin-left:-6px;
-}
-
 form label {width:100%;}
 
 legend {
 	font-size: 1.5em;
 }
 
-/*
-Mozilla Tutorial stuff:
-*/
+/**/
 ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
-
-#relevance-slots, #relevance-options {
-	display: inline-block;
-	padding: 2% 2%;
-	margin: auto 10%;
-	border-width: 2px;
-	border-radius: 5px;
-	border-color: orange;
-	border-style: solid;
 }
   
 .select-wrapper {
@@ -120,6 +71,83 @@ button {
 	/* This extra margin represent roughly the same space as the space
 	   between the labels and their text fields */
 	margin-left: .5em;
+}
+
+
+/* || Likert Scales */
+form .likert {
+	list-style:none;
+	width:100%;
+	margin:0;
+	padding:0 0 35px;
+	display:block;
+	border-bottom:2px solid #efefef;
+}
+
+form .likert:last-of-type {border-bottom:0;}
+
+form .likert:before {
+	content: '';
+	position:relative;
+	top:11px;
+	left:9.5%;
+	display:block;
+	background-color:#efefef;
+	height:4px;
+	width:78%;
+}
+
+form .likert li {
+	display:inline-block;
+	width:19%;
+	text-align:center;
+	vertical-align: top;
+}
+  
+form .likert li input[type="radio"] {
+	display:block;
+	position:relative;
+	top:-2px;
+	left:50%;
+	margin-left:-6px;
+
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	-webkit-appearance: none;
+	background-clip: content-box;
+	padding: 2px;
+}
+
+[value="strongly_disagree"] {
+	border: 2px solid #de1d1d;
+}
+[value="strongly_disagree"]:checked {
+	background-color: #de1d1d;
+}
+[value="disagree"] {
+	border: 2px solid #de8e1d;
+}
+[value="disagree"]:checked {
+	background-color: #de8e1d;
+}
+[value="neutral"] {
+	border: 2px solid #858585;
+}
+[value="neutral"]:checked {
+	background-color: #858585;
+}
+[value="agree"] {
+	border: 2px solid #c4c423;
+}
+[value="agree"]:checked {
+	background-color: #c4c423;
+}
+[value="strongly_agree"] {
+	border: 2px solid #259618;
+}
+[value="strongly_agree"]:checked {
+	background-color: #259618;
 }
 
 
