@@ -158,7 +158,6 @@ button {
 	height: 35px;
 	width: 180px;
 	display: block;
-	vertical-align: middle;
 }
 
 .empty:first-child{
