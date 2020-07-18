@@ -47,11 +47,12 @@ function dragDrop(e) {
 	}
 }
 
+
+
 // MAIN:
 (function(){
 	
 	const descriptorNames = ["depth", "hardness", "roughness", "warmth", "brightness", "sharpness", "boominess"];
-
 	const availableEmpties = document.querySelectorAll("#available > .empty");
 
 	for (let empty of availableEmpties) {
@@ -69,9 +70,9 @@ function dragDrop(e) {
 		empty.appendChild(optionDescriptor);
 	}
 
+
 	const allEmpties = document.querySelectorAll(".empty");
 	const allFills = document.querySelectorAll(".fill");
-	const selectedCol = document.querySelector("#selected");
 	
 	// .empty drag listeners
 	for (const empty of allEmpties) {
@@ -85,4 +86,17 @@ function dragDrop(e) {
 		fill.addEventListener('dragstart', dragStart);
 		fill.addEventListener('dragend', dragEnd);
 	}
+
+	const collapseButton = document.querySelector(".collapsible");
+	// Collapsing logic:
+	collapseButton.addEventListener("click", function() {
+		this.classList.toggle("active-collapsible");
+		const formWrap = document.querySelector(".form-wrap");
+		if (formWrap.style.maxHeight) {
+			formWrap.style.maxHeight = null;
+		} else {
+			formWrap.style.maxHeight = formWrap.scrollHeight + "px";
+		}
+	});
+
 })();

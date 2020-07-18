@@ -1,6 +1,9 @@
 html,body {padding:0;margin:0;}
-.wrap {
-  font:14px Arial, san-serif;
+.form-wrap {
+	font:14px Arial, san-serif;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.4s ease-out;
 }
 
 form {
@@ -223,4 +226,42 @@ form .likert li input[type="radio"] {
 
 .invisible {
 	display: none;
+}
+
+/*|| Collapsible styling */
+
+.collapsible {
+	background-color: #bd2d32;
+	color: white;
+	cursor: pointer;
+	padding: 6px;
+	display: block;
+	
+	margin: 0 auto;
+	width: calc(800px + 2em);
+	border: none;
+	outline: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.active-collapsible, .collapsible:hover {
+	font-weight: normal;
+}
+
+.collapsible:hover {
+	background-color: #ff363d;
+}
+
+.collapsible::after {
+	content: "+";
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	float: right;
+	margin-right: 5px;
+}
+
+.active-collapsible::after {
+	content: "–";
 }
